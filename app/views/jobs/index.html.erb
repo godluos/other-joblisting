@@ -1,0 +1,8 @@
+<table class="table table-boldered">
+  <div class="job">
+    <%= link_to("Add a job", new_job_path, class: "btn btn-default") %>
+  </div>
+
+    <%= render :partial => "job_item", :collection => @jobs, :as => :job %>
+
+</table>
