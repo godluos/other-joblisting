@@ -30,7 +30,7 @@ class Admin::JobsController < ApplicationController
 
   def update
     @job = Job.find(params[:id])
-    if @job.update(job.params)
+    if @job.update(job_params)
       redirect_to admin_jobs_path
     else
       render :edit
@@ -53,7 +53,7 @@ class Admin::JobsController < ApplicationController
   def hide
     @job = Job.find(params[:id])
     @job.hide!
-    
+
     redirect_to :back
   end
 
