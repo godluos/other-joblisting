@@ -11,7 +11,7 @@ class ResumesController < ApplicationController
     @resume = Resume.new(resume_params)
     @resume.job = @job
     @resume.user = current_user
-    if resume.save
+    if @resume.save
       flash[:notice] = "成功提交履历"
       redirect_to job_path(@job)
     else

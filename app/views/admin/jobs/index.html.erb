@@ -3,6 +3,17 @@
     <%= link_to("Add a job", new_job_path, class: "btn btn-default") %>
   </div>
 
-    <%= render :partial => "job_item", :collection => @jobs, :as => :job %>
+  <thead>
+    <tr>
+      <td>职缺</td>
+      <td>收到履历数量</td>
+      <td>薪资下限</td>
+      <td>薪资上限</td>
+      <td>刊登时间</td>
+    </tr>
+  </thead>
 
+  <tbody>
+    <%= render :partial => "job_item", :collection => @jobs, :as => :job %>
+  </tbody>
 </table>
