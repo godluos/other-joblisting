@@ -1,3 +1,87 @@
 // Place all the styles related to the admin::jobs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.table{
+  margin-top: 100px;
+}
+
+.job {
+   margin-top: 50px
+ }
+.custab{
+  border: 1px solid #ccc;
+
+  padding: 5px;
+  margin: 5% 0;
+  box-shadow: 3px 3px 2px #ccc;
+
+  transition: 0.5s;
+}
+
+.custab:hover{
+  box-shadow: 3px 3px 0px transparent;
+  transition: 0.5s;
+}
+footer {
+    background-color:#3E2723;
+    color: #ffab00;
+    padding: 32px;
+}
+
+footer a {
+    color: #3E2723;
+}
+
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+}
+.navbar {
+    margin-bottom: 0;
+    background-color: #ECEFF1;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity:0.9;
+}
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand {
+    color: #3E2723 !important;
+}
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+    color: #00bfa5 !important;
+}
+
+/* The active link */
+.navbar-nav li.active a {
+    color: #ECEFF1 !important;
+    background-color: #3E2723!important;
+}
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+/* Dropdown */
+.open .dropdown-toggle {
+    color: #ECEFF1  ;
+    background-color: #eceff1!important;
+}
+
+.dropdown-menu {
+  background-color: #ECEFF1 !important;
+}
+/* Dropdown links */
+.dropdown-menu li a {
+    color: #3E2723 !important;
+}
+
+/* On hover, the dropdown links will turn red */
+.dropdown-menu li a:hover {
+    color: #000 !important;
+    background-color: #00bfa5 !important;
+}

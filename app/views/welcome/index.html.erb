@@ -15,7 +15,7 @@
         <li><a href="#tour">精品</a></li>
         <li><a href="#contact">联系我们</a></li>
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">开始途行
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">加入途行
             <span class="caret"></span>
           </a>
           <ul class="dropdown-menu">
@@ -42,7 +42,7 @@
     <div class="item active">
       <img src= "http://ongoo1pyy.bkt.clouddn.com/p1.png" alt="New York">
       <div class="carousel-caption">
-        <h3>在途行</h3>
+        <h3>途行</h3>
         <p>你会了解旅行不是只有美图和朋友圈</p>
       </div>
     </div>
@@ -50,7 +50,7 @@
     <div class="item">
       <img src= "http://ongoo1pyy.bkt.clouddn.com/p3.png" alt="Chicago">
       <div class="carousel-caption">
-        <h3>在途行</h3>
+        <h3>途行</h3>
         <p>你会发现生命原来可以很不一样</p>
       </div>
     </div>
@@ -58,7 +58,7 @@
     <div class="item">
       <img src= "http://ongoo1pyy.bkt.clouddn.com/p2.png" alt="Los Angeles">
       <div class="carousel-caption">
-        <h3>在途行</h3>
+        <h3>途行</h3>
         <p>你能遇见更多和你一样不甘平庸的人</p>
       </div>
     </div>
@@ -77,8 +77,9 @@
 
 
 
-<div  id="good" class="container text-center">
-  <h3>进入途行</h3>
+<div  id="good" class="container text-center" style=
+" width: 100% ; background-color: #ECEFF1" >
+  <h3>在途行</h3>
   <p><em>你能找到完全不同的旅行方式</em></p>
   <p>你会获得意想不到的旅行体验</p>
   <br>
@@ -120,12 +121,10 @@
     </div>
   </div>
 </div>
+    <a href="/jobs" id="begin" class="btn btn-default btn-lg ">进入旅途</a>
 </div>
 
-
-
-
-<div class="bg-1">
+<div class="bg-1" style=" width: 100% ; background-color: #37474F" >
   <div id="tour" class="container">
     <h3 class="text-center">精品</h3>
     <p class="text-center">精品徒步线路<br> 找到志同道合的同伴，发现前所未见的景色 </p>
@@ -159,7 +158,8 @@
   </div>
   </div>
 
-  <div id="contact" class="container slideanim">
+  <div id="contact" class="container slideanim"style=
+  " width: 100% ; background-color: #ECEFF1">
   <h3 class="text-center">联系我们</h3>
   <p class="text-center">如果您有优质的户外徒步路线，或者您是资深的户外活动组织者，请您联系我们
     <br>和我们一起，让更多的人爱上户外运动，爱上徒步旅行</p>
@@ -180,15 +180,15 @@
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
   <div class="modal-dialog" role="document">
     <div class="loginmodal-container">
-       <h2>Log in</h2>
+       <h2>登录</h2>
        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
          <div class="form-inputs">
-           <%= f.input :email, required: false, autofocus: true %>
-           <%= f.input :password, required: false %>
-           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+           <%= f.input :email, required: false, autofocus: true,:label => "注册邮箱" %>
+           <%= f.input :password, required: false,:label => "输入密码"  %>
+           <%= f.input :remember_me, :label => "记住我",as: :boolean if devise_mapping.rememberable? %>
          </div>
          <div class="form-actions">
-           <%= f.button :submit, "Log in" %>
+           <%= f.button :submit, "登入" %>
          </div>
        <% end %>
     </div>
@@ -197,27 +197,23 @@
 
 <div class="modal fade" id="signup-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
   <div class="modal-dialog">
-    <div class="loginmodal-container">
-      <h2>Sign up</h2>
+    <div class="loginmodal-container ">
+        <h2>注册</h2>
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= f.error_notification %>
         <div class="form-inputs">
-          <%= f.input :email, required: true, autofocus: true %>
-          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-          <%= f.input :password_confirmation, required: true %>
+          <%= f.input :email,:label => "注册邮箱", required: true, autofocus: true %>
+          <%= f.input :password, required: true, hint: ("#{@minimum_password_length}
+          characters minimum" if @minimum_password_length),:label => "输入密码" %>
+          <%= f.input :password_confirmation, required: true, :label => "再次输入" %>
         </div>
         <div class="form-actions">
-            <%= f.button :submit, "Sign up" %>
+            <%= f.button :submit, "注册" %>
         </div>
       <% end %>
     </div>
   </div>
 </div>
-<footer class="text-center">
-  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-    <span class="glyphicon glyphicon-chevron-up"></span>
-  </a><br><br>
-  <p>途行 Made By <a href="http://godluos-blog.logdown.com/"
-    data-toggle="tooltip" title="Visit Blog">GodLuoS</a></p>
-</footer>
+
+  <%= render "common/footer" %>
 </body>

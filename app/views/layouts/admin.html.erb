@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
-       <title>Job Listing</title>
+       <title>途行</title>
        <%= csrf_meta_tags %>
 
        <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,22 +9,24 @@
    </head>
 
    <body>
-       <div class="container-fluid">
-         <%= render "common/navbar1" %>
+  <div class="container-fluid">
+         <div class="row">
+           <%= render "common/navbar" %>
+         </div>
          <%= render "common/flashes" %>
-         <div class="list_group">
-              <div class="col-md-2">
-             <ul class="nav nav-pills nav-atacked" style="max-width: 300px; padding-top:45px;">
-               <a href= admin_jobs_path class="list-group-item active">Admin Dashborad</a>
-               <a href= jobs_path class="list-group-item">User Dashboard</a>
+             <div class="list_group">
+               <div class="col-md-2">
+              <ul class="nav nav-pills nav-atacked" style="max-width: 300px; padding-top:45px;">
+               <a href= '#' class="list-group-item active">管理员界面</a>
+               <a href= '#' class="list-group-item">游客界面</a>
              </ul>
            </div>
-
+          </div>
            <div class="col-md-10">
              <%= yield %>
            </div>
          </div>
-       </div>
+
 
        <%= render "common/footer" %>
     </body>
