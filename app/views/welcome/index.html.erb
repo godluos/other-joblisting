@@ -14,6 +14,7 @@
         <li><a href="#good">介绍</a></li>
         <li><a href="#tour">精品</a></li>
         <li><a href="#contact">联系我们</a></li>
+          <% if !current_user %>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">加入途行
             <span class="caret"></span>
@@ -23,6 +24,20 @@
             <li><a href="#" data-toggle="modal" data-target="#login-modal">登入</a></li>
           </ul>
         </li>
+        <% else %>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            欢迎回来
+            <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+            <% if current_user.admin? %>
+            <li><%= link_to("管理员", admin_jobs_path) %></li>
+            <% end %>
+            <li><%= link_to("登出", destroy_user_session_path, method: :delete) %></li>
+          </ul>
+        </li>
+      <% end %>
       </ul>
     </div>
   </div>
@@ -80,7 +95,7 @@
 <div  id="good" class="container text-center" style=
 " width: 100% ; background-color: #ECEFF1" >
   <h3>在途行</h3>
-  <p><em>你能找到完全不同的旅行方式</em></p>
+  <p><你能找到完全不同的旅行方式</p>
   <p>你会获得意想不到的旅行体验</p>
   <br>
   <div class="row slideanim">
@@ -102,10 +117,10 @@
       <img src="http://ongoo1pyy.bkt.clouddn.com/s2.png" class="img-circle person" alt="Random Name">
     </a>
     <div id="demo2" class="collapse">
-      <p>在一起</p>
-      <p>Loves drummin'</p>
-      <p>Member since 1988</p>
-      <p></p>
+      <p>在跨越艰难险阻</p>
+      <p>在经历风雨过后</p>
+      <p>任何情感都会</p>
+      <p>愈发真挚</p>
     </div>
   </div>
   <div class="col-sm-4">
@@ -114,14 +129,14 @@
       <img src="http://ongoo1pyy.bkt.clouddn.com/s3.png" class="img-circle person" alt="Random Name">
     </a>
     <div id="demo3" class="collapse">
-      <p>Bass player</p>
-      <p>Loves math</p>
-      <p>Member since 2005</p>
-      <p></p>
+      <p>从神山上体会生命的意义</p>
+      <p>在仙湖旁洞察人生的价值</p>
+      <p>所有一切不平凡的经历</p>
+      <p>都需要一个伟大的开始</p>
     </div>
   </div>
 </div>
-    <a href="/jobs" id="begin" class="btn btn-default btn-lg ">进入旅途</a>
+    <a href="/jobs" id="begin" class="btn btn-default btn-lg ">进入途行</a>
 </div>
 
 <div class="bg-1" style=" width: 100% ; background-color: #37474F" >

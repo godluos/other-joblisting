@@ -1,9 +1,9 @@
-<h3> 投交履历到 <%= @job.title %> </h3>
+<h3> 投交<%= @job.title %>旅行申请 </h3>
 
 <hr>
 
 <%= simple_form_for [@job, @resume] do |f| %>
-  <%= f.input :content %>
-  <%= f.input :attachment%>
+  <%= f.input :content, :label => "申请原因" %>
+  <%= f.input :attachment, :label => "个人资料" %>
   <%= f.submit "送出" %>
 <% end %>
