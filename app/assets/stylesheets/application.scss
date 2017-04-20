@@ -119,6 +119,21 @@
     background-color: #fff;
     color: #000;
 }
+/* Black buttons with extra padding and without rounded borders */
+.btn-show {
+    padding: 10px 20px;
+    background-color: #37474F;
+    color: #ECEFF1;
+    border-radius: 0;
+    transition: .2s;
+}
+
+/* On hover, the color of .btn will transition to white with black text */
+.btn-show:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
 
 /* Add a dark background color with a little bit see-through */
 .navbar {

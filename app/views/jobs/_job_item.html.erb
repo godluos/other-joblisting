@@ -1,9 +1,11 @@
+
 <div id="jobform" class="well auth-box">
-
-<div class="listing clearfix">
-  <div class="col-md-12">
-
+<div id="each-job" class="row">
+  <div class="col-md-12 col-lg-10 col-lg-offset-1">
     <h5><%= job.title %></h5>
+<div id="job-show" class="pull-right" >
+    <%= link_to("查看详情", job_path(job), :class => "btn-show ") %>
+</div>
 
 
       <div id="jobs" class="row">
@@ -29,8 +31,7 @@
           <span><i class="fa fa-clock-o" aria-hidden="true">
           &emsp;</i> <%= time_ago_in_words(job.created_at) %></span>
         </div>
-
+      </div>
   </div>
-</div>
 </div>
 </div>
