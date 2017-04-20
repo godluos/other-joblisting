@@ -1,33 +1,31 @@
-<div class="col-md-12">
-
-<div class="row">
-  <div class="col-md-8">
-<div class="title">
+<div id="userindex" class="col-md-12">
+  <div id="usertitle" class="row">
+    <div class="col-md-8">
+      <div class="title">
         <h2>全部行程</h2>
-</div>
-</div>
-<div class="col-md-4">
-    <div id="px" class="dropdown clearfix pull-right">
-      <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider"
-      data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      排序<span class="caret"></span>
-      </button>
-      <ul class="dropdown-menu" aria-ladelley="dropdownMenuDivider">
-        <li>
-          <%= link_to("按照人数下限排列", jobs_path(order: "by_lower_bound"))%>
-        </li>
-        <li>
-          <%= link_to("按照人数上限排列", jobs_path(order: "by_upper_bound"))%>
-        </li>
-        <li>
-          <%= link_to("按照发表日期排序", jobs_path ) %>
-        </li>
-      </ul>
+      </div>
     </div>
-</div>
-</div>
-<div>
+    <div class="col-md-4">
+      <div id="px" class="dropdown  pull-right">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider"
+        data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+        排序<span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" aria-ladelley="dropdownMenuDivider">
+          <li>
+          <%= link_to("按照人数下限排列", jobs_path(order: "by_lower_bound"))%>
+          </li>
+          <li>
+            <%= link_to("按照人数上限排列", jobs_path(order: "by_upper_bound"))%>
+          </li>
+          <li>
+            <%= link_to("按照发表日期排序", jobs_path ) %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="userjob" >
   <%= render :partial => "job_item", :collection => @jobs, :as => :job %>
-</div>
-
+  </div>
 </div>

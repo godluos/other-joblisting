@@ -1,6 +1,32 @@
 // Place all the styles related to the jobs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#lb {
-  padding: 10px
+#userindex {
+padding-left:30px;
+width: 95%;
+}
+#usertitle {
+padding-top: 15px;
+color: #37474F;
+}
+#userjob {
+padding-top: 25px;
+padding-bottom: 60px;
+margin: 25px;
+}
+#px {
+padding-top: 50px;
+margin-bottom: -25px
+}
+
+#jobform {
+  opacity: 0.8;
+  background-color: #37474F;
+  color: #ECEFF1;
+}
+#show1 {
+  padding-bottom: 400px;
+}
+#show-btn{
+  padding-bottom: 100px
 }

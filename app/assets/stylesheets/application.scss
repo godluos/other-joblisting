@@ -19,6 +19,206 @@
 @import "font-awesome";
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
+
+.container {
+    padding: 80px 120px;
+}
+#bk1 {
+   background-image: url("http://ongoo1pyy.bkt.clouddn.com/back.png");
+}
+
+.person {
+    border: 3px solid transparent;
+    margin-bottom: 25px;
+    width: 250px;
+    height: 250px;
+    transition: box-shadow 0.7s;
+}
+.person:hover {
+     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+
+.carousel-caption{
+  padding-bottom: 400px;
+}
+
+.carousel-caption p {
+  font-size: 1.5em;
+
+}
+.carousel-caption h2 {
+    color: #fff !important;
+    font-size: 5em
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+}
+
+#good h3 {
+  font-size: 2.5em;
+}
+#good p {
+  font-size: 1.2em;
+}
+.bg-1 {
+    background: #2d2d30;
+    color: #bdbdbd;
+}
+.bg-1 h3 {
+  color: #fff;
+  font-size: 2em;
+}
+.bg-1 p {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+/* Remove rounded borders from list */
+.list-group-item:first-child {
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Remove border and add padding to thumbnails */
+.thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+
+.thumbnail p {
+    margin-top: 15px;
+    color: #555;
+}
+
+/* Black buttons with extra padding and without rounded borders */
+.btn-job {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #f1f1f1;
+    border-radius: 0;
+    transition: .2s;
+}
+
+/* On hover, the color of .btn will transition to white with black text */
+.btn-job:hover, .btn:focus {
+    border: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Add a dark background color with a little bit see-through */
+.navbar {
+    margin-bottom: 0;
+    background-color: #37474F;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+
+}
+
+/* Add a gray color to all navbar links */
+.navbar li a, .navbar .navbar-brand {
+    color: #ECEFF1 !important;
+}
+
+/* On hover, the links will turn white */
+.navbar-nav li a:hover {
+    color: #ffab00 !important;
+}
+
+/* The active link */
+.navbar-nav li.active a {
+    color: #37474F !important;
+    background-color: #ECEFF1!important;
+}
+
+/* Remove border color from the collapsible button */
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+/* Dropdown */
+.open .dropdown-toggle {
+    color: #37474F  ;
+    background-color: #37474F!important;
+}
+
+.dropdown-menu {
+  background-color: #37474F !important;
+}
+/* Dropdown links */
+.dropdown-menu li a {
+
+    color: #ECEFF1 !important;
+}
+
+/* On hover, the dropdown links will turn red */
+.dropdown-menu li a:hover {
+    color:  #ffab00 !important;
+    background-color: #37474F !important;
+}
+footer {
+    background-color:#37474F;
+    color: #eceff1;
+    padding: 32px;
+}
+
+footer a {
+    color: #eceff1;
+}
+
+footer a:hover {
+    color: #777;
+    text-decoration: none;
+  }
+
+.slideanim {visibility:hidden;}
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    /* The duration of the animation */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
 /****** LOGIN MODAL ******/
 .loginmodal-container {
   padding: 30px;
@@ -112,79 +312,4 @@
 
 .login-help{
   font-size: 12px;
-}
-footer {
-    background-color:#37474F;
-    color: #eceff1;
-    padding: 32px;
-}
-
-footer a {
-    color: #eceff1;
-}
-
-footer a:hover {
-    color: #777;
-    text-decoration: none;
-}
-.navbar {
-    margin-bottom: 0;
-    background-color: #37474F;
-    border: 0;
-    font-size: 11px !important;
-    letter-spacing: 4px;
-    opacity:0.9;
-}
-
-/* Add a gray color to all navbar links */
-.navbar li a, .navbar .navbar-brand {
-    color: #ECEFF1 !important;
-}
-
-/* On hover, the links will turn white */
-.navbar-nav li a:hover {
-    color: #ffab00 !important;
-}
-
-/* The active link */
-.navbar-nav li.active a {
-    color: #37474F !important;
-    background-color: #ECEFF1!important;
-}
-
-/* Remove border color from the collapsible button */
-.navbar-default .navbar-toggle {
-    border-color: transparent;
-}
-
-/* Dropdown */
-.open .dropdown-toggle {
-    color: #37474F  ;
-    background-color: #37474F!important;
-}
-
-.dropdown-menu {
-  background-color: #37474F !important;
-}
-/* Dropdown links */
-.dropdown-menu li a {
-
-    color: #ECEFF1 !important;
-}
-
-/* On hover, the dropdown links will turn red */
-.dropdown-menu li a:hover {
-    color:  #ffab00 !important;
-    background-color: #37474F !important;
-}
-@media (min-width: 768px) {
-  .navbar {
-    border-radius: 0; //圆角为0
-   }
- }
-
-#px {
-  margin-top: 30px;
-  margin-right: 160px;
-  padding-bottom: -30px;
 }
