@@ -34,6 +34,7 @@
             <% if current_user.admin? %>
             <li><%= link_to("管理员", admin_jobs_path) %></li>
             <% end %>
+            <li><%= link_to("所有旅程", jobs_path) %></li>
             <li><%= link_to("登出", destroy_user_session_path, method: :delete) %></li>
           </ul>
         </li>
