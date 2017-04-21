@@ -11,9 +11,9 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#good">介绍</a></li>
-        <li><a href="#tour">精品</a></li>
-        <li><a href="#contact">联系我们</a></li>
+        <li><a href="#good">如何途行</a></li>
+        <li><a href="#tour">发现途行</a></li>
+        <li><a href="#contact">了解途行</a></li>
           <% if !current_user %>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">加入途行
@@ -35,6 +35,8 @@
             <li><%= link_to("管理员", admin_jobs_path) %></li>
             <% end %>
             <li><%= link_to("所有旅程", jobs_path) %></li>
+            <li> <%= link_to("我报名的旅程", account_resumes_path) %></li>
+            <li class="divider"> </li>
             <li><%= link_to("登出", destroy_user_session_path, method: :delete) %></li>
           </ul>
         </li>
@@ -95,13 +97,15 @@
 
 <div  id="good" class="container text-center" style=
 " width: 100% ; background-color: #ECEFF1">
-  <h3>在途行</h3>
-  <p>你能找到完全不同的旅行方式</p>
-  <p>你会获得意想不到的旅行体验</p>
+  <h3>进入途行</h3>
+  <p>在途行你将找到完全不同的旅行方式</p>
+  <p>在途行你能遇见共同前行的旅行伙伴</p>
+  <p>在途行你会获得意想不到的旅行体验</p>
   <br>
   <div class="row slideanim">
   <div class="col-sm-4">
-    <p class="text-center"><strong>风景</strong></p><br>
+    <p class="text-center"><strong>旅程</strong></p>
+    <i class="fa fa-angle-double-down" aria-hidden="true"></i><br>
     <a href="#demo" data-toggle="collapse">
       <img src="http://ongoo1pyy.bkt.clouddn.com/s1.png" class="img-circle person" alt="Random Name">
     </a>
@@ -110,10 +114,12 @@
       <p>还是神秘的深林</p>
       <p>都蕴藏着惊心动魄的美丽</p>
       <p>只有深入其中才能发觉</p>
+      <a href="/jobs" id="begin" class="btn btn-default btn-lg ">进入途行</a>
     </div>
   </div>
   <div class="col-sm-4">
-    <p class="text-center"><strong>朋友</strong></p><br>
+    <p class="text-center"><strong>朋友</strong></p>
+    <i class="fa fa-angle-double-down" aria-hidden="true"></i><br>
     <a href="#demo2" data-toggle="collapse">
       <img src="http://ongoo1pyy.bkt.clouddn.com/s2.png" class="img-circle person" alt="Random Name">
     </a>
@@ -122,10 +128,12 @@
       <p>在经历风雨过后</p>
       <p>任何情感都会</p>
       <p>愈发真挚</p>
+      <a href="/jobs" id="begin" class="btn btn-default btn-lg ">进入途行</a>
     </div>
   </div>
   <div class="col-sm-4">
-    <p class="text-center"><strong>经历</strong></p><br>
+    <p class="text-center"><strong>经历</strong></p>
+    <i class="fa fa-angle-double-down" aria-hidden="true"></i><br>
     <a href="#demo3" data-toggle="collapse">
       <img src="http://ongoo1pyy.bkt.clouddn.com/s3.png" class="img-circle person" alt="Random Name">
     </a>
@@ -134,15 +142,16 @@
       <p>在仙湖旁洞察人生的价值</p>
       <p>所有一切不平凡的经历</p>
       <p>都需要一个伟大的开始</p>
+      <a href="/jobs" id="begin" class="btn btn-default btn-lg ">进入途行</a>
     </div>
   </div>
 </div>
-    <a href="/jobs" id="begin" class="btn btn-default btn-lg ">进入途行</a>
 </div>
+
 
 <div class="bg-1" style=" width: 100% ; background-color: #37474F" >
   <div id="tour" class="container">
-    <h3 class="text-center">精品</h3>
+    <h2 class="text-center">发现途行</h2>
     <p class="text-center">精品徒步线路<br> 找到志同道合的同伴，发现前所未见的景色 </p>
   </div>
 
@@ -176,23 +185,25 @@
 
   <div id="contact" class="container slideanim"style=
   " width: 100% ; background-color: #ECEFF1">
-  <h3 class="text-center">联系我们</h3>
-  <p class="text-center">如果您有优质的户外徒步路线，或者您是资深的户外活动组织者，请您联系我们
-    <br>和我们一起，让更多的人爱上户外运动，爱上徒步旅行</p>
-  <div class="row test">
+  <h3 class="text-center"> 了解途行</h3><br><br>
+
     <div class="col-md-4">
-      <p>联系方式</p>
+       <h4>联系我们:</h4>
+      <p class="text">&emsp;&emsp;如果您有优质的户外徒步路线，或者您是资深的户外活动组织者，
+        请您联系我们，和我们一起让更多的人爱上户外运动，爱上徒步旅行</p>
+      <h5>联系方式:</h5>
       <p><span class="glyphicon glyphicon-map-marker"></span>湖北，武汉</p>
-      <p><span class="glyphicon glyphicon-phone"></span>Phone: +86 18602768857</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Phone: +86 12345678900</p>
       <p><span class="glyphicon glyphicon-envelope"></span>Email: godluos@gmail.com</p>
     </div>
     <div class="col-md-8">
-      <div class="thumbnail">
+      <div id="lianxi" class="thumbnail">
        <img src="http://ongoo1pyy.bkt.clouddn.com/help.png" alt="help">
      </div>
     </div>
   </div>
-</div>
+
+
 <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
   <div class="modal-dialog" role="document">
     <div class="loginmodal-container">

@@ -1,9 +1,9 @@
-<h3> 投交<%= @job.title %>旅行申请 </h3>
-
+<div id="sub">
+<h3> 申请参加<%= @job.title %>行程 </h3>
 <hr>
-
 <%= simple_form_for [@job, @resume] do |f| %>
   <%= f.input :content, :label => "申请原因" %>
   <%= f.input :attachment, :label => "个人资料" %>
   <%= f.submit "送出" %>
 <% end %>
+</div>
