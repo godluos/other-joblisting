@@ -1,3 +1,4 @@
+<div id="simplejob" class="container-fluid">
 <div id="show1">
 <div class="row text-center">
 <h1> <%= @job.title %> </h1>
@@ -6,6 +7,24 @@
   <%= simple_format(@job.description) %>
 </p>
 </div>
-<div id="show-btn" class="text-center">
-  <%= link_to("提交申请", new_job_resume_path(@job), :class => "btn btn-info btn-lg") %>
+<table class="table table-boldered">
+  <thead>
+    <tr>
+      <td>团队人数</td>
+      <td>报名人数</td>
+      <td>出发时间</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td><%= @job.wage_lower_bound %>~<%= @job.wage_upper_bound %></td>
+      <td><%= @job.resumes.count %></td>
+      <td><%= @job.contact_email %></td>
+    </tr>
+  </tbody>
+</table>
+<div id="show-btn" >
+  <%= link_to("提交申请", new_job_resume_path(@job), :class => "btn-show") %>
+</div>
 </div>
