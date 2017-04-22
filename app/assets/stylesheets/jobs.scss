@@ -20,13 +20,15 @@ margin-bottom: -25px
 }
 
 #jobform {
-  background-color:rgba(0,0,0,0.2);
+  background-color:rgba(27,205,174,0.3);
   color: #37474F!important;
-  transition: box-shadow 1s;
-    transition: 0.5s;
+  transition: box-shadow 0.7s;
+    transition: 0.6s;
 }
+
+
 #jobform:hover {
-  background-color: #ECEFF1;
+  background-color: #F5F5F5;
   box-shadow: 5px 0px 40px rgba(0,0,0, .2);
 }
 #show1 {

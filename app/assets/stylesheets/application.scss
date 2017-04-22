@@ -25,7 +25,7 @@
 }
 
 #bk1 {
-   background-color:#eceff1 ;
+   background-color:#F5F5F5 ;
 }
 
 .person {
@@ -36,9 +36,34 @@
     transition: box-shadow 0.7s;
 }
 .person:hover {
-     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+     box-shadow: 5px 0px 40px rgba(0,0,0, .6);
 }
 
+#trip1 {
+
+    transition: box-shadow 0.7s;
+    margin-left: 30px;
+}
+#trip1:hover{
+  box-shadow: 5px 0px 40px rgba(0,0,0, 0.9)
+}
+#trip2 {
+
+    transition: box-shadow 0.7s;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+#trip2:hover{
+  box-shadow: 5px 0px 40px rgba(0,0,0, 0.9)
+}
+#trip3 {
+
+    transition: box-shadow 0.7s;
+    margin-right: 30px;
+}
+#trip3:hover{
+  box-shadow: 5px 0px 40px rgba(0,0,0, 0.9)
+}
 .carousel-inner img {
     width: 100%; /* Set width to 100% */
     margin: auto;
@@ -49,11 +74,11 @@
 }
 
 .carousel-caption p {
-  font-size: 1.5em;
+  font-size: 1.4em;
 
 }
 .carousel-caption h2 {
-    color: #fff !important;
+    color: #F5F5F5 !important;
     font-size: 5em
 }
 
@@ -61,6 +86,9 @@
     .carousel-caption {
         display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
+}
+h2 {
+  font-size: 3.2em;
 }
 h3 {
   font-size: 2.2em;
@@ -70,11 +98,13 @@ h3 {
   font-size: 1.2em;
 }
 .bg-1 {
-    background: #2d2d30;
-    color: #bdbdbd;
+    padding-bottom: 100px;
+    color: #323232;
+    width: 100% ;
+    background-image: url(http://ongoo1pyy.bkt.clouddn.com/bg2.png);
 }
 .bg-1 h3 {
-  color: #fff;
+  color: #F5F5F5;
 }
 .bg-1 p {
   font-style: italic;
@@ -110,8 +140,8 @@ h3 {
 /* Black  buttons with extra padding and without rounded borders */
 .btn-job {
     padding: 10px 20px;
-    background-color: #333;
-    color: #f1f1f1;
+    background-color: #44ABE7;
+    color: #323232;
     border-radius: 0;
     transition: .2s;
 }
@@ -119,14 +149,14 @@ h3 {
 /* On hover, the color of .btn will transition to white with black text */
 .btn-job:hover, .btn:focus {
     border: 1px solid #333;
-    background-color: #fff;
+    background-color: #F5F5F5;
     color: #000;
 }
 /* Black buttons with extra padding and without rounded borders */
 .btn-show {
     padding: 10px 20px;
-    background-color: #37474F;
-    color: #ECEFF1;
+    background-color: #323232;
+    color: #F5F5F5;
     border-radius: 0;
     transition: .2s;
 }
@@ -134,14 +164,14 @@ h3 {
 /* On hover, the color of .btn will transition to white with black text */
 .btn-show:hover, .btn:focus {
     border: 1px solid #333;
-    background-color: #fff;
+    background-color: #F5F5F5;
     color: #000;
 }
 
 /* Add a dark background color with a little bit see-through */
 .navbar {
     margin-bottom: 0;
-    background-color: #37474F;
+    background-color:rgba(8,134,206,0.8);
     border: 0;
     font-size: 11px !important;
     letter-spacing: 4px;
@@ -150,18 +180,18 @@ h3 {
 
 /* Add a gray color to all navbar links */
 .navbar li a, .navbar .navbar-brand {
-    color: #ECEFF1 !important;
+    color: #F5F5F5 !important;
 }
 
 /* On hover, the links will turn white */
 .navbar-nav li a:hover {
-    color: #ffab00 !important;
+    color: #323232 !important;
 }
 
 /* The active link */
 .navbar-nav li.active a {
-    color: #37474F !important;
-    background-color: #ECEFF1!important;
+    color: #44ABE7 !important;
+    background-color: #F5F5F5!important;
 }
 
 /* Remove border color from the collapsible button */
@@ -171,33 +201,33 @@ h3 {
 
 /* Dropdown */
 .open .dropdown-toggle {
-    color: #37474F  ;
-    background-color: #37474F!important;
+    color: #44ABE7  ;
+    background-color: #44ABE7!important;
 }
 
 .dropdown-menu {
-  background-color: #37474F !important;
+  background-color: #44ABE7 !important;
 }
 /* Dropdown links */
 .dropdown-menu li a {
 
-    color: #ECEFF1 !important;
+    color: #F5F5F5 !important;
 }
 
 /* On hover, the dropdown links will turn red */
 .dropdown-menu li a:hover {
-    color:  #ffab00 !important;
-    background-color: #37474F !important;
+    color:  #323232 !important;
+    background-color: #44ABE7 !important;
 }
 footer {
-    background-color:#37474F;
-    color: #eceff1;
+    background-color:#44ABE7;
+    color: #F5F5F5;
     padding: 32px;
 
 }
 
 footer a {
-    color: #eceff1;
+    color: #F5F5F5;
 }
 
 footer a:hover {
@@ -270,7 +300,7 @@ footer a:hover {
   width: 100%;
   margin-bottom: 10px;
   -webkit-appearance: none;
-  background: #fff;
+  background: #F5F5F5;
   border: 1px solid #d9d9d9;
   border-top: 1px solid #c0c0c0;
   /* border-radius: 2px; */
@@ -302,7 +332,7 @@ footer a:hover {
 .loginmodal-submit {
   /* border: 1px solid #3079ed; */
   border: 0px;
-  color: #fff;
+  color: #F5F5F5;
   text-shadow: 0 1px rgba(0,0,0,0.1);
   background-color: #4d90fe;
   padding: 17px 0px;
@@ -339,4 +369,26 @@ body {
 
 .navbar {
     font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
+}
+cop1 h2 {
+ text-align: left;
+
+}
+cop1 p {
+ text-align: left;
+
+}
+cop2 h2{
+ text-align : center;
+}
+cop2 p {
+ text-align : center;
+}
+cop3 h2 {
+ text-align : right;
+
+}
+cop3 p {
+ text-align : right;
+
 }
