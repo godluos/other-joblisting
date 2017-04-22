@@ -1,5 +1,5 @@
 class JobsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy, :join, :quit]
   def index
     @jobs = case params[:order]
     when 'by_lower_bound'
@@ -51,6 +51,22 @@ class JobsController < ApplicationController
     @job = Job.find(params[:id])
     @job.destroy
       redirect_to jobs_path, alert: 'Job delete'
+  end
+
+  def join
+    @job = Job.find(params[:id])
+    if !current_user.is_member_of?(@job)
+      current_user.join!(@job)
+    end
+    redirect_to job_path(@job)
+  end
+
+  def quit
+    @job = Job.find(parame[:id])
+    if current_user.is_member_of?(@job)
+      current_user.quit!(@job)
+    end
+    redirect_to job_path(@job)
   end
 
   private

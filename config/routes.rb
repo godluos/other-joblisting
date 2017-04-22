@@ -11,6 +11,10 @@ Rails.application.routes.draw do
   end
 
    resources :jobs do
+     member do
+       post :join
+       post :quit
+     end
      resources :resumes
    end
 

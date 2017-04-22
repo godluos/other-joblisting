@@ -10,4 +10,16 @@ class User < ApplicationRecord
   def admin?
     is_admin
   end
+
+  def is_member_of?(job)
+    participated_jobs.include?(job)
+  end
+
+  def join!(job)
+    participated_jobs << job
+  end
+
+  def quit!(job)
+    participated_jobs.delete(job) 
+  end
 end
