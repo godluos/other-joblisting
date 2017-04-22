@@ -35,6 +35,7 @@
             <li><%= link_to("管理员", admin_jobs_path) %></li>
             <% end %>
             <li><%= link_to("所有旅程", jobs_path) %></li>
+            <li> <%= link_to("我关注的行程", account_jobs_path) %></li>
             <li> <%= link_to("我报名的旅程", account_resumes_path) %></li>
             <li class="divider"> </li>
             <li><%= link_to("登出", destroy_user_session_path, method: :delete) %></li>

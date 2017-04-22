@@ -62,7 +62,7 @@ class JobsController < ApplicationController
   end
 
   def quit
-    @job = Job.find(parame[:id])
+    @job = Job.find(params[:id])
     if current_user.is_member_of?(@job)
       current_user.quit!(@job)
     end

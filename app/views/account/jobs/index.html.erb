@@ -1,0 +1,24 @@
+<div class="col-md-12">
+
+  <h2 class="text-center"> 我申请的旅程 </h2>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th> 旅程名称 </th>
+        <th> 开始时间 </th>
+        <th> 报名人数 </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @jobs.each do |job| %>
+        <tr>
+          <td> <%= link_to(job.title,job_path(job))%></td>
+          <td> <%= job.contact_email %> </td>
+          <td> <%= job.resumes.count %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
