@@ -5,6 +5,7 @@
 <%= f.input :wage_lower_bound, :label => "人数下限" %>
 <%= f.input :wage_upper_bound, :label => "人数上限" %>
 <%= f.input :contact_email , :label => "出发日期"%>
+<%= select_tag(:category_id, options_for_select(@categories), :prompt => "类别") %>
 <%= f.input :is_hidden %>
 
   <%= f.submit "发布"%>
