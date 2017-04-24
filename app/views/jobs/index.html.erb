@@ -11,31 +11,74 @@
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         排序<span class="caret"></span>
         </button>
-        <ul class="dropdown-menu" aria-ladelley="dropdownMenuDivider">
-          <li>
-          <%= link_to("按照人数下限排列", jobs_path(order: "by_lower_bound"))%>
-          </li>
-          <li>
-            <%= link_to("按照人数上限排列", jobs_path(order: "by_upper_bound"))%>
-          </li>
-          <li>
-            <%= link_to("按照发表日期排序", jobs_path ) %>
-          </li>
-        </ul>
+          <ul class="dropdown-menu" aria-ladelley="dropdownMenuDivider">
+            <li>
+              <%= link_to("按照人数下限排列", jobs_path(order: "by_lower_bound"))%>
+            </li>
+            <li>
+              <%= link_to("按照人数上限排列", jobs_path(order: "by_upper_bound"))%>
+            </li>
+            <li>
+              <%= link_to("按照发表日期排序", jobs_path ) %>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  <div class="row ">
-  <div class="col-md-2">
-   <ul class="nav nav-pills nav-atacked" >
-    <a href= '#' class="list-group-item active">简单</a>
-    <a href= '#' class="list-group-item">困难</a>
-    <a href= '#' class="list-group-item">很难</a>
-   </ul>
-</div>
+      <div class="row ">
+        <div class="col-md-2">
+          <ul class="nav nav-pills nav-atacked" >
+            <%= link_to(" 简单", jobs_path(category:"easy"))%>
+            <%= link_to("困难", jobs_path(category:"hard"))%>
+            <%= link_to("很难", jobs_path(category:"veryhard"))%>
+            <%= link_to("全部", jobs_path)%>
+          </ul>
+        </div>
 
-  <div id="userjob"  class="col-md-9">
-  <%= render :partial => "job_item", :collection => @jobs, :as => :job %>
-  </div>
-</div>
-</div>
-  </div>
+        <div id="userjob"  class="col-md-9">
+  <%= @jobs.each do |job| %>
+          <div id="jobform" class="well auth-box">
+
+            <div id="each-job" class="row">
+
+              <div class="col-md-12 col-lg-10 col-lg-offset-1">
+                <h5><i class="fa fa-map-marker" aria-hidden="true">
+                </i> <%= job.title %></h5>
+
+                <div id="job-show" class="pull-right" >
+                  <%= link_to("查看详情", job_path(job), :class => "btn-show ") %>
+                </div>
+
+
+                <div id="jobs" class="row">
+                  <div class="col-md-3 col-sm-6">
+                    <p>团队人数</p><br>
+                    <span><i class="fa fa-user" aria-hidden="true"></i>~
+                      <i class="fa fa-users" aria-hidden="true"></i>&emsp;
+                      <%= job.wage_lower_bound %> ~ <%= job.wage_upper_bound %>
+                    </span>
+                  </div>
+                  <div class="col-md-3 col-sm-6">
+                    <p>报名人数</p><br>
+                    <span><i class="fa fa-user-circle-o" aria-hidden="true">
+                      &emsp;</i><%= job.resumes.count %></span>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                      <p>出发时间</p><br>
+                      <span><i class="fa fa-calendar" aria-hidden="true">
+                        &emsp;</i> <%= job.contact_email %></span>
+                      </div>
+                      <div class="col-md-3 col-sm-6">
+                        <p>创建时间</p><br>
+                        <span><i class="fa fa-clock-o" aria-hidden="true">
+                          &emsp;</i> <%= time_ago_in_words(job.created_at) %></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  <% end %>
+            </div>
+
+            </div>
+          </div>
+        </div>
