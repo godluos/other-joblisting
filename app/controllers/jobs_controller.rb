@@ -9,7 +9,13 @@ class JobsController < ApplicationController
     else
       Job.published.recent
     end
-    @jobs.recent.paginate(:page => params[:page], :per_page => 6)
+
+    if params[:category].blank?
+       @jobs = Job.published.recent
+    else
+        @category_id = Category.find_by(name: params[:category]).id
+        @jobs = Job.where(:category_id => @category_id).recent
+    end
   end
 
   def new
@@ -72,7 +78,8 @@ class JobsController < ApplicationController
   private
 
   def job_params
-    params.require(:job).permit(:title, :description, :wage_lower_bound, :wage_upper_bound, :contact_email, :is_hidden)
+    params.require(:job).permit(:title, :description, :wage_lower_bound,
+     :wage_upper_bound, :contact_email, :is_hidden, :category_id)
   end
 
 end
