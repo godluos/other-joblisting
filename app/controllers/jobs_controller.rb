@@ -1,17 +1,17 @@
 class JobsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy, :join, :quit]
   def index
-    @jobs = case params[:order]
-    when 'by_lower_bound'
-      Job.published.order('wage_lower_bound DESC')
-    when 'by_upper_bound'
-      Job.published.order('wage_upper_bound DESC')
-    else
-      Job.published.recent
-    end
+
 
     if params[:category].blank?
-       @jobs = Job.published.recent
+      @jobs = case params[:order]
+      when 'by_lower_bound'
+        Job.published.order('wage_lower_bound DESC')
+      when 'by_upper_bound'
+        Job.published.order('wage_upper_bound DESC')
+      else
+        Job.published.recent
+      end
     else
         @category_id = Category.find_by(name: params[:category]).id
         @jobs = Job.where(:category_id => @category_id).recent
