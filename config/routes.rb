@@ -10,11 +10,14 @@ Rails.application.routes.draw do
       resources :resumes
     end
   end
-
+  
    resources :jobs do
      member do
        post :join
        post :quit
+     end
+     collection do
+       get :search
      end
      resources :resumes
    end
@@ -26,6 +29,5 @@ Rails.application.routes.draw do
    namespace :account do
      resources :jobs
    end
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
