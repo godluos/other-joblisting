@@ -5,7 +5,7 @@
         <h2>全部行程</h2>
       </div>
 
-      <div id="px" class="dropdown  pull-left">
+      <div id="px" class="dropdown  pull-right">
         <button class="btn btn-default dropdown-toggle" type="button"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
         排序<span class="caret"></span>
@@ -24,31 +24,27 @@
         </div>
 </div>
       <div class="row ">
-        <div class="col-md-3">
+        <div class="col-md-2">
           <div class="thumbnail">
-            <img src="http://ongoo1pyy.bkt.clouddn.com/sanxia.png">
-            <h4 class="text-center"><%= link_to("全部", jobs_path)%></h4>
-            <p>111</p>
+            <img src="http://ongoo1pyy.bkt.clouddn.com/all.png">
+            <h4 class="text-center"><%= link_to("全部难度", jobs_path)%></h4>
           </div>
           <div class="thumbnail">
-            <img src="http://ongoo1pyy.bkt.clouddn.com/sanxia.png">
-            <h4 class="text-center"><%= link_to("普通", jobs_path(category:"普通"))%></h4>
-            <p>111</p>
+            <img src="http://ongoo1pyy.bkt.clouddn.com/hd1.png">
+            <h4 class="text-center"><%= link_to("普通级", jobs_path(category:"普通"))%></h4>
           </div>
           <div class="thumbnail">
-            <img src="http://ongoo1pyy.bkt.clouddn.com/sanxia.png">
-            <h4 class="text-center"><%= link_to("专业", jobs_path(category:"专业"))%></h4>
-            <p>111</p>
+            <img src="http://ongoo1pyy.bkt.clouddn.com/hd2.png">
+            <h4 class="text-center"><%= link_to("专业级", jobs_path(category:"专业"))%></h4>
           </div>
           <div class="thumbnail">
-            <img src="http://ongoo1pyy.bkt.clouddn.com/sanxia.png">
-            <h4 class="text-center"><%= link_to("挑战", jobs_path(category:"挑战"))%></h4>
-            <p>111</p>
+            <img src="http://ongoo1pyy.bkt.clouddn.com/hd3.png">
+            <h4 class="text-center"><%= link_to("挑战级", jobs_path(category:"挑战"))%></h4>
           </div>
         </div>
 
 
-        <div id="userjob"  class="col-md-9">
+        <div id="userjob"  class="col-md-10">
             <%= render :partial => "job_item", :collection => @jobs, :as => :job %>
         </div>
 

@@ -5,11 +5,11 @@
 </div>
 <span class="pull-right">
   <% if current_user && current_user.is_member_of?(@job) %>
-    <label class="label label-success"> 群组成员 </label>
-        <%= link_to("Quit job", quit_job_path(@job), method: :post, class: "btn btn-default") %>
+    <label class="label label-success"> 已关注 </label><br>
+        <%= link_to(" ", quit_job_path(@job), method: :post, class: "fa fa-bookmark fa-3x") %>
   <% else %>
-    <label class="label label-warning"> 不是群组成员 </label>
-         <%= link_to("Join job", join_job_path(@job), method: :post, class: "btn btn-default") %>
+    <label class="label label-warning"> 未关注 </label><br>
+         <%= link_to(" ", join_job_path(@job), method: :post, class: "fa fa-bookmark-o fa-3x") %>
   <% end %>
 </span>
 <p>
